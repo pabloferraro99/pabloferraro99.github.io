@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pablo Ferraro — Data Scientist & Quantitative Researcher. Machine learning, systematic trading, and end-to-end analytics across finance and technology.">
+  <title>Pablo Ferraro — Data & Quant Analytics</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon (placeholder — replace with your own) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>P</text></svg>">
+</head>
+<body>
+
+  <!-- ========================================
+       NAVIGATION
+       ======================================== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">Pablo<span>.</span></a>
+
+      <!-- Desktop links -->
+      <div class="nav__links">
+        <a href="#about" class="nav__link" data-section="about">About</a>
+        <a href="#skills" class="nav__link" data-section="skills">Skills</a>
+        <a href="#experience" class="nav__link" data-section="experience">Experience</a>
+        <a href="#projects" class="nav__link" data-section="projects">Projects</a>
+        <a href="#education" class="nav__link" data-section="education">Education</a>
+        <a href="#contact" class="nav__cta" data-section="contact">Contact</a>
+      </div>
+
+      <!-- Hamburger (mobile) -->
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="nav__mobile-menu" id="mobile-menu">
+      <a href="#about" class="nav__mobile-link">About</a>
+      <a href="#skills" class="nav__mobile-link">Skills</a>
+      <a href="#experience" class="nav__mobile-link">Experience</a>
+      <a href="#projects" class="nav__mobile-link">Projects</a>
+      <a href="#education" class="nav__mobile-link">Education</a>
+      <a href="#contact" class="nav__mobile-link">Contact</a>
+    </div>
+  </nav>
+
+
+  <!-- ========================================
+       HERO SECTION
+       ======================================== -->
+  <section class="hero" id="hero">
+    <div class="hero__sweep"></div>
+    <canvas class="hero__canvas" id="hero-canvas"></canvas>
+    <div class="hero__grid"></div>
+    <div class="container hero__content">
+
+      <p class="hero__greeting">Hello, I'm</p>
+
+      <h1 class="hero__name">Pablo <span>Ferraro</span></h1>
+
+      <p class="hero__title">
+        Data Scientist & Quantitative Researcher. Building ML-driven models, systematic trading strategies, and end-to-end analytics solutions across finance and technology.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Get in Touch
+        </a>
+        <a href="#projects" class="btn btn--outline">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          View Projects
+        </a>
+      </div>
+
+      <div class="hero__socials">
+        <!-- EDIT: Replace # with your actual URLs -->
+        <a href="https://linkedin.com/in/pabloferraro99" class="hero__social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/pabloferraro99" class="hero__social-link" aria-label="GitHub" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       ABOUT SECTION
+       ======================================== -->
+  <section class="section section--light" id="about">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section-label">About Me</span>
+        <h2 class="section-title">Building Clarity from Complexity</h2>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__text reveal reveal-delay-1">
+          <p>
+            I'm a Data Scientist and Quantitative Researcher with strong expertise in machine learning, predictive modelling, and data engineering across finance and technology. I develop end-to-end analytics solutions using Python, SQL, and Azure Databricks, transforming complex data into actionable insights.
+          </p>
+          <p>
+            On my own time, I research and trade US equities and commodities systematically, designing alpha-generating strategies with rigorous backtesting and execution optimization. I'm passionate about finding signal in noise and generating consistent returns.
+          </p>
+          <p>
+            Currently working as a Quantitative Analyst at Deloitte in Financial Risk, while actively building my own quant research and trading systems. IE University and UC Berkeley alumni based in Madrid.
+          </p>
+        </div>
+
+        <div class="about__highlights">
+          <div class="about__card reveal reveal-delay-2">
+            <h3 class="about__card-title">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              What I Do
+            </h3>
+            <p>Build data-driven models for credit and portfolio analytics, design systematic trading strategies, and develop AI-powered tools that scale in production environments.</p>
+          </div>
+          <div class="about__card reveal reveal-delay-3">
+            <h3 class="about__card-title">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              What I Excel At
+            </h3>
+            <p>Connecting quantitative research with production code. From alpha discovery and backtesting to deploying ML pipelines on large-scale datasets with >10M records.</p>
+          </div>
+          <div class="about__card reveal reveal-delay-4">
+            <h3 class="about__card-title">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              Problems I Solve
+            </h3>
+            <p>How to forecast credit risk with precision. How to find alpha in noisy markets. How to turn 20M+ raw time-series records into actionable predictions that save real money.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       SKILLS SECTION
+       ======================================== -->
+  <section class="section section--alt" id="skills">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section-label">Expertise</span>
+        <h2 class="section-title">Tools & Technologies</h2>
+        <p class="section-subtitle">A curated stack built for quantitative analysis, data engineering, and financial modeling.</p>
+      </div>
+
+      <div class="skills__grid">
+
+        <div class="skill-card reveal reveal-delay-1">
+          <div class="skill-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3 class="skill-card__title">Data Science & ML</h3>
+          <div class="skill-card__tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">XGBoost</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Autoencoders</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal reveal-delay-2">
+          <div class="skill-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 class="skill-card__title">Quant Finance & Trading</h3>
+          <div class="skill-card__tags">
+            <span class="skill-tag">Portfolio Analytics</span>
+            <span class="skill-tag">Alpha Research</span>
+            <span class="skill-tag">Backtesting</span>
+            <span class="skill-tag">Time Series</span>
+            <span class="skill-tag">ARIMA / SARIMA</span>
+            <span class="skill-tag">Financial Forecasting</span>
+            <span class="skill-tag">Risk Modeling</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal reveal-delay-3">
+          <div class="skill-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="skill-card__title">Data Engineering</h3>
+          <div class="skill-card__tags">
+            <span class="skill-tag">Azure Databricks</span>
+            <span class="skill-tag">ETL Pipelines</span>
+            <span class="skill-tag">Data Modeling</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">APIs</span>
+            <span class="skill-tag">Web Scraping</span>
+            <span class="skill-tag">Automation</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal reveal-delay-4">
+          <div class="skill-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <h3 class="skill-card__title">BI & Visualization</h3>
+          <div class="skill-card__tags">
+            <span class="skill-tag">Dashboards</span>
+            <span class="skill-tag">Streamlit</span>
+            <span class="skill-tag">Plotly</span>
+            <span class="skill-tag">Predictive Modelling</span>
+            <span class="skill-tag">Anomaly Detection</span>
+            <span class="skill-tag">Reporting</span>
+            <span class="skill-tag">AI Tools</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       EXPERIENCE SECTION
+       ======================================== -->
+  <section class="section section--light" id="experience">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section-label">Experience</span>
+        <h2 class="section-title">Where I've Made an Impact</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">Oct 2024 — Present</span>
+            <h3 class="timeline__role">Quantitative Analyst — Financial Risk</h3>
+            <p class="timeline__company">Deloitte, Madrid</p>
+            <div class="timeline__achievements">
+              <p class="timeline__achievement">Developed and deployed data-driven models for credit and portfolio analytics, leveraging Python, SQL, Azure, and Databricks on large-scale datasets (>10M records).</p>
+              <p class="timeline__achievement">Built end-to-end data pipelines for ingestion, transformation, and reporting, supporting real-time insights and automated dashboards in production.</p>
+              <p class="timeline__achievement">Applied time series and predictive modelling techniques (ARIMA, SARIMA, regression, ML) to forecast credit parameters and optimize portfolio performance.</p>
+              <p class="timeline__achievement">Collaborated cross-functionally with data engineers, risk teams, and business stakeholders to deliver scalable AI solutions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">May 2021 — Present</span>
+            <h3 class="timeline__role">Portfolio Manager & Quant Researcher</h3>
+            <p class="timeline__company">Freelance — Asset Management, Valencia</p>
+            <div class="timeline__achievements">
+              <p class="timeline__achievement">Managing a multi-asset portfolio (equities, ETFs, crypto) for private clients, achieving annualized returns >35%.</p>
+              <p class="timeline__achievement">Designed and implemented algorithmic trading models in Python using backtesting frameworks and statistical learning.</p>
+              <p class="timeline__achievement">Researching alpha in US equities and commodities through systematic strategies with rigorous risk management.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">Jan 2023 — Jun 2023</span>
+            <h3 class="timeline__role">Finance Intern</h3>
+            <p class="timeline__company">Everon Research (FinTech Startup), Valencia</p>
+            <div class="timeline__achievements">
+              <p class="timeline__achievement">Analyzed financial data supplied by Reuters in real time, provided performance reports, and developed investment plans for clients.</p>
+              <p class="timeline__achievement">Designed presentations for investors, researched new investment opportunities, and participated in client meetings, successfully securing a deal with a new client.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       PROJECTS SECTION
+       ======================================== -->
+  <section class="section section--alt" id="projects">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section-label">Projects</span>
+        <h2 class="section-title">Selected Work</h2>
+        <p class="section-subtitle">A selection of projects where I applied quantitative thinking to solve real problems.</p>
+      </div>
+
+      <div class="projects__grid">
+
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-card__accent"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Systematic Trading Strategies</h3>
+            <span class="project-card__label">Problem</span>
+            <p class="project-card__text">Finding consistent alpha across futures, equities, and crypto markets requires disciplined systematic approaches, not discretionary gut calls.</p>
+            <span class="project-card__label">Approach</span>
+            <p class="project-card__text">Designed, tested, and optimized systematic trading models with alpha discovery, execution optimization, and rigorous backtesting across multiple asset classes.</p>
+            <div class="project-card__bottom">
+              <div class="project-card__tags">
+                <span class="project-card__tag">Python</span>
+                <span class="project-card__tag">Backtesting</span>
+                <span class="project-card__tag">Statistical Learning</span>
+                <span class="project-card__tag">Time Series</span>
+              </div>
+              <div class="project-card__impact">Robust performance through systematic alpha generation and risk-managed execution</div>
+              <div class="project-card__footer">
+                <a href="#" class="project-card__link">
+                  View on GitHub
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-card__accent"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Equity Valuation & Composite Scoring</h3>
+            <span class="project-card__label">Problem</span>
+            <p class="project-card__text">Traditional stock screening relies on single metrics that miss the full picture of a company's value and momentum.</p>
+            <span class="project-card__label">Approach</span>
+            <p class="project-card__text">Built multi-factor valuation models combining P/E, ROE, debt metrics, and momentum signals to generate predictive composite scores for stock selection.</p>
+            <div class="project-card__bottom">
+              <div class="project-card__tags">
+                <span class="project-card__tag">Python</span>
+                <span class="project-card__tag">Pandas</span>
+                <span class="project-card__tag">Factor Models</span>
+                <span class="project-card__tag">Quantitative Analysis</span>
+              </div>
+              <div class="project-card__impact">Improved portfolio alpha through data-driven stock selection</div>
+              <div class="project-card__footer">
+                <a href="#" class="project-card__link">
+                  View on GitHub
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-3">
+          <div class="project-card__accent"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Fraud Detection — Tabby BNPL</h3>
+            <span class="project-card__label">Problem</span>
+            <p class="project-card__text">A Buy Now Pay Later fintech needed to reduce its default rate (PD30) from 4.01% to 1.8% while maintaining approval rates, with limited fraud labels and severe class imbalance.</p>
+            <span class="project-card__label">Approach</span>
+            <p class="project-card__text">Built a supervised ML pipeline with rules-based labeling, feature engineering from transactional patterns, and ensemble methods (XGBoost, Random Forest, Logistic Regression).</p>
+            <div class="project-card__bottom">
+              <div class="project-card__tags">
+                <span class="project-card__tag">Python</span>
+                <span class="project-card__tag">XGBoost</span>
+                <span class="project-card__tag">Scikit-learn</span>
+                <span class="project-card__tag">Pandas</span>
+              </div>
+              <div class="project-card__impact">85%+ precision, PD30 reduced to ~1.8% with ~0% decline rate</div>
+              <div class="project-card__footer">
+                <a href="https://github.com/pabloferraro99/Fraud-Detection-Mini" class="project-card__link" target="_blank" rel="noopener">
+                  View on GitHub
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-card__accent"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Predictive Maintenance — Airbus</h3>
+            <span class="project-card__label">Problem</span>
+            <p class="project-card__text">Unplanned aircraft maintenance events cause massive costs and operational disruption. Early anomaly detection is critical.</p>
+            <span class="project-card__label">Approach</span>
+            <p class="project-card__text">Developed a predictive maintenance pipeline on 20M+ time-series records using Autoencoder + XGBoost for anomaly detection and failure prediction.</p>
+            <div class="project-card__bottom">
+              <div class="project-card__tags">
+                <span class="project-card__tag">Python</span>
+                <span class="project-card__tag">XGBoost</span>
+                <span class="project-card__tag">Autoencoder</span>
+                <span class="project-card__tag">Time Series</span>
+              </div>
+              <div class="project-card__impact">>80% precision, ~$30K/month cost savings per aircraft</div>
+              <div class="project-card__footer">
+                <a href="#" class="project-card__link">
+                  View on GitHub
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       EDUCATION SECTION
+       ======================================== -->
+  <section class="section section--light" id="education">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section-label">Education & Certifications</span>
+        <h2 class="section-title">Academic Foundation</h2>
+      </div>
+
+      <div class="education__grid">
+
+        <div class="edu-card reveal reveal-delay-1">
+          <div class="edu-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+          </div>
+          <div class="edu-card__info">
+            <h3 class="edu-card__title">Master's in Data Science & AI</h3>
+            <p class="edu-card__institution">IE School of Human Sciences and Technology, Madrid</p>
+            <span class="edu-card__date">Sept 2023 — July 2024</span>
+          </div>
+        </div>
+
+        <div class="edu-card reveal reveal-delay-2">
+          <div class="edu-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <div class="edu-card__info">
+            <h3 class="edu-card__title">Exchange Program — DS & AI</h3>
+            <p class="edu-card__institution">UC Berkeley, California</p>
+            <span class="edu-card__date">April 2024</span>
+          </div>
+        </div>
+
+        <div class="edu-card reveal reveal-delay-3">
+          <div class="edu-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+          </div>
+          <div class="edu-card__info">
+            <h3 class="edu-card__title">BSc Business Management</h3>
+            <p class="edu-card__institution">Universitat de Valencia (High Performance Group)</p>
+            <span class="edu-card__date">Sept 2018 — Dec 2022</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       CONTACT SECTION
+       ======================================== -->
+  <section class="section section--dark contact" id="contact">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Contact</span>
+        <h2 class="contact__title">Let's Work Together</h2>
+        <p class="contact__subtitle">
+          Open to new opportunities, collaborations, and interesting conversations about data, finance, and technology.
+        </p>
+      </div>
+
+      <div class="contact__links reveal reveal-delay-1">
+        <a href="mailto:p.ferraroc@gmail.com" class="contact__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          p.ferraroc@gmail.com
+        </a>
+        <!-- EDIT: Replace # with your LinkedIn URL -->
+        <a href="https://linkedin.com/in/pabloferraro99" class="contact__link" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <!-- EDIT: Replace # with your GitHub URL -->
+        <a href="https://github.com/pabloferraro99" class="contact__link" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">&copy; <span id="year"></span> Pablo Ferraro. Built with precision.</p>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
