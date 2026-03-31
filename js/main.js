@@ -75,9 +75,9 @@
     if (!canvas) return;
     var ctx = canvas.getContext('2d');
     var particles = [];
-    var particleCount = 120;
-    var connectionDistance = 180;
-    var mouseRadius = 250;
+    var particleCount = 70;
+    var connectionDistance = 140;
+    var mouseRadius = 180;
     var mouseX = -1000;
     var mouseY = -1000;
 
@@ -90,13 +90,13 @@
       particles = [];
       for (var i = 0; i < particleCount; i++) {
         // Mix of blue and purple tinted particles
-        var hue = Math.random() > 0.7 ? 'purple' : 'blue';
+        var hue = Math.random() > 0.8 ? 'purple' : 'blue';
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.7,
-          vy: (Math.random() - 0.5) * 0.7,
-          baseR: Math.random() * 2.5 + 1,
+          vx: (Math.random() - 0.5) * 0.35,
+          vy: (Math.random() - 0.5) * 0.35,
+          baseR: Math.random() * 1.2 + 0.5,
           r: 0,
           pulse: Math.random() * Math.PI * 2,
           hue: hue
@@ -138,22 +138,21 @@
           var dist = Math.sqrt(cdx * cdx + cdy * cdy);
 
           if (dist < connectionDistance) {
-            var lineAlpha = (1 - dist / connectionDistance) * 0.25;
+            var lineAlpha = (1 - dist / connectionDistance) * 0.1;
 
-            // Brighter near mouse
             var midX = (p.x + p2.x) / 2;
             var midY = (p.y + p2.y) / 2;
             var midDist = Math.sqrt((midX - mouseX) * (midX - mouseX) + (midY - mouseY) * (midY - mouseY));
             if (midDist < mouseRadius) {
               var boost = 1 - midDist / mouseRadius;
-              lineAlpha = (1 - dist / connectionDistance) * (0.25 + boost * 0.55);
+              lineAlpha = (1 - dist / connectionDistance) * (0.1 + boost * 0.2);
             }
 
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
             ctx.strokeStyle = 'rgba(100, 160, 255, ' + lineAlpha + ')';
-            ctx.lineWidth = midDist < mouseRadius ? 1.2 : 0.6;
+            ctx.lineWidth = midDist < mouseRadius ? 0.7 : 0.4;
             ctx.stroke();
           }
         }
@@ -170,41 +169,25 @@
         if (p.y < -10) p.y = canvas.height + 10;
         if (p.y > canvas.height + 10) p.y = -10;
 
-        p.r = p.baseR + Math.sin(time * 3 + p.pulse) * 0.6;
+        p.r = p.baseR + Math.sin(time * 2 + p.pulse) * 0.3;
 
         var dx = p.x - mouseX;
         var dy = p.y - mouseY;
         var distToMouse = Math.sqrt(dx * dx + dy * dy);
         var mouseInfluence = Math.max(0, 1 - distToMouse / mouseRadius);
 
-        // Attract to mouse
         if (distToMouse < mouseRadius && distToMouse > 5) {
-          p.x -= dx * 0.008 * mouseInfluence;
-          p.y -= dy * 0.008 * mouseInfluence;
+          p.x -= dx * 0.004 * mouseInfluence;
+          p.y -= dy * 0.004 * mouseInfluence;
         }
 
-        var alpha = 0.4 + mouseInfluence * 0.6;
-        var radius = p.r + mouseInfluence * 3;
+        var alpha = 0.2 + mouseInfluence * 0.4;
+        var radius = p.r + mouseInfluence * 1.5;
         var color = p.hue === 'purple' ? '139, 92, 246' : '80, 140, 255';
 
-        // Outer glow
-        if (radius > 1.5) {
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, radius + 6, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(' + color + ', ' + (alpha * 0.06) + ')';
-          ctx.fill();
-        }
-
-        // Main particle
         ctx.beginPath();
         ctx.arc(p.x, p.y, radius, 0, Math.PI * 2);
         ctx.fillStyle = 'rgba(' + color + ', ' + alpha + ')';
-        ctx.fill();
-
-        // Bright center
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, radius * 0.4, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(200, 220, 255, ' + (alpha * 0.5) + ')';
         ctx.fill();
       }
 
